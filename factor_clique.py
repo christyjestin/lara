@@ -7,6 +7,9 @@ MAX_INT = 2 ** 31 - 1
 
 class FactorClique(Clique):
     def __init__(self, factor, max_val=MAX_INT):
+        assert factor > 10
+        assert (max_val / factor) > 10
+
         self.factor = factor
         self.max_val = max_val
 

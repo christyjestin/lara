@@ -31,6 +31,9 @@ class Clique(ABC):
     def generate_examples(self, n: int) -> List:
         return [self.generate_example() for _ in range(n)]
 
+    def generate_samples(self, n: int) -> List:
+        return [self.generate_sample() for _ in range(n)]
+
     def generate_counterexamples(self, n: int) -> List:
         """Use the custom helper function if available; otherwise fall back to rejection sampling"""
         try:
